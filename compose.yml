@@ -3,7 +3,7 @@ services:
   db:
     image: ruthikrampalli/pyapp:db_image
     deploy:
-      replicas: 2
+      replicas: 1
     ports:
       - "3306:3306"
     networks:
