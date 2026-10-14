@@ -9,7 +9,7 @@ services:
     networks:
       - mynetwork
     environment:
-      - MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mysql_db_password
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mysql_db_password
     secrets:
       - mysql_db_password
 
