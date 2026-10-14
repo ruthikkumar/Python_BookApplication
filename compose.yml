@@ -8,10 +8,6 @@ services:
       - "3306:3306"
     networks:
       - mynetwork
-    environment:
-      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mysql_db_password
-    secrets:
-      - mysql_db_password
 
   auth_service:
     image: ruthikrampalli/pyapp:auth_image
@@ -62,6 +58,3 @@ services:
 networks:
   mynetwork:
     driver: overlay
-secrets:
-   mysql_db_password:
-       external: true
